@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4FE99719-32C2-27E7-9136-71EDB7B036B0" name="AjusteAplicacao">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>B6C7E3D8-D31A-6728-58E8-E8FA5FD1ECA3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Ajuste" id="DEB64AB8-3670-ABB9-768B-B026C5B962F7">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>19167F6A-D9E8-4F60-AAC7-8C39D4907741</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6E3DAAC2-BE8B-2803-45B2-63886FEFD05B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataHora_Ajuste" id="8B148FA3-5186-DE84-588E-C7A81F6FCAB6">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>9C051369-4844-47A6-7E9A-94B4C3146A1B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>35920E86-93FD-509C-43F9-86580F4B17D2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo_Ajuste" id="1A219B9C-73C3-C3B7-C732-0AF7C95BB8A4">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>A91CFEA3-6021-E2D9-7B45-7DB82F6CC813</importedID>
+<constraintName>chk_ajuste_tipo</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F6496FA-FBF4-7B28-17DD-D97323F211BE</domain>
+<listOfValues>
+<valueDef value="Irrigação" description=""/>
+<valueDef value="Nutriente K" description=""/>
+<valueDef value="Nutriente P" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantidade_Aplicada" id="0D20648F-EF18-B541-989C-2E9E382114F7">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>F2F221C7-4AF5-DC9E-850A-923F9697F6AD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6DB448AE-531B-535F-9331-9DDF0A57BE81</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Unidade_Medida" id="ABEB4EA6-3F08-41F6-9A25-921BB7D2A6F8">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>153EE780-72CD-6683-FB8D-2FC8C11CE9DE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>3C1E1C53-EDEB-67EB-E7A8-CE1629909236</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_AreaCultivo" id="4F453F5E-5DF0-64C3-638A-11BED9659543">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>C153A449-C58C-DC97-17E4-2607C72CD294</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C25ED489-76B6-163D-100E-F7B9B19BDBC9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A22673E-2ED7-B50B-F2E9-3B8FC61EF9B1" referredColumn="2F3C2752-E0A1-6C9F-DFE5-9C15365CEC5C"/>
+</associations>
+</Column>
+<Column name="ID_Sugestao_Origem" id="79DF646B-66D1-33E8-9204-234E423D0D66">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>35A2CF66-0DEB-025A-FE22-7E3ED01CFC03</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C25ED489-76B6-163D-100E-F7B9B19BDBC9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0E7FE77-0E66-AC8E-E783-D652119E5110" referredColumn="4FFF3C24-2DC0-6A19-7545-683E4CD9E152"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0AB55B37-6D8E-23FC-7F9F-9EE560389222" name="pk_ajuste_aplicacao">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>C9AB75FB-3E5B-DE49-8526-BB7CA70ED857</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEB64AB8-3670-ABB9-768B-B026C5B962F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD34D5CD-2C87-37B1-283F-22844B73C651" name="fk_ajuste_area">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F453F5E-5DF0-64C3-638A-11BED9659543"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F254DC5C-9C18-3DAC-5917-E919FE284BFF" name="fk_ajuste_sugestao">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79DF646B-66D1-33E8-9204-234E423D0D66"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

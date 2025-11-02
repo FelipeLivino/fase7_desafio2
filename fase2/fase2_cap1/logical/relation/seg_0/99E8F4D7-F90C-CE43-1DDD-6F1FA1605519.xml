@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_hist_area" directorySegmentName="seg_0" id="99E8F4D7-F90C-CE43-1DDD-6F1FA1605519">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>49E008C5-AE94-9919-18C4-29B5E32A0346</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<sourcePk>48EE0324-64AD-445C-5577-611E314C38C5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>75C8E0CF-5F42-8A3F-3481-65923AFDB4D5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>60F88F0F-3C87-9F70-6298-33BB240D8DB9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,47 @@
+
+
+services:
+  fase1-cli:
+    build: ./fase1
+    container_name: fase1-cli
+    depends_on:
+      - fase2-db
+
+  fase2-db:
+    build: ./fase2
+    container_name: fase2-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=farmtech
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  fase3-app:
+    build: ./fase3
+    container_name: fase3-app
+    ports:
+      - "8001:8000" # API
+      - "8502:8501" # Streamlit
+    depends_on:
+      - fase2-db
+
+  fase4-app:
+    build: ./fase4
+    container_name: fase4-app
+    ports:
+      - "8002:8000" # API
+      - "8503:8501" # Streamlit
+    depends_on:
+      - fase2-db
+
+  fase6-app:
+    build: ./fase6
+    container_name: fase6-app
+    volumes:
+      - ./fase6:/app
+
+volumes:
+  pgdata:

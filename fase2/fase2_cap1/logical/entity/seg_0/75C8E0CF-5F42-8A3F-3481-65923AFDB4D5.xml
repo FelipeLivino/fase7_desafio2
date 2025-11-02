@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="75C8E0CF-5F42-8A3F-3481-65923AFDB4D5" name="AreaCultivo">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>201A8973-A798-2E3B-EB2E-DF77C7846EA4</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID AreaCultivo" id="C95FACA2-605A-0785-7D48-B6082679C6B1">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>2F3C2752-E0A1-6C9F-DFE5-9C15365CEC5C</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C25ED489-76B6-163D-100E-F7B9B19BDBC9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nome Area" id="50B3BEA5-8C7F-0231-F37B-01D3313EAEFA">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>9BA3D8F4-0F61-8519-C22B-23166A2C47DA</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4729CF74-1BF6-32EC-1F33-9836F825AF44</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Localizacao" id="92BD8400-23CF-1105-7EC6-DC3D44EB8A85">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>260CEE0A-2EE2-9C32-EE2D-F745A5CB2060</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4729CF74-1BF6-32EC-1F33-9836F825AF44</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tamanho" id="B3535145-C3CC-0960-E654-3702D5561194">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>2BDDC492-8386-E34F-FB8D-25C82C29F5D1</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6DB448AE-531B-535F-9331-9DDF0A57BE81</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="48EE0324-64AD-445C-5577-611E314C38C5" name="pk area cultivo">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>D967F21E-6A93-B1F7-14A1-CAA3C7CB3329</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C95FACA2-605A-0785-7D48-B6082679C6B1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

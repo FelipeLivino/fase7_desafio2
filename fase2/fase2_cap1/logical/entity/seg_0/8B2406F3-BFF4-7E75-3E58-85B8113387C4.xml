@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8B2406F3-BFF4-7E75-3E58-85B8113387C4" name="Sensor">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>E71D6A11-E515-F5AC-9542-45D9F4A5357B</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID Sensor" id="396D7A25-0B90-EC06-A6E5-3B6AC0BE2F43">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>6CEA577B-5B3B-EA00-19CE-5011772A6DDE</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C25ED489-76B6-163D-100E-F7B9B19BDBC9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tipo Sensor" id="29167AF6-10ED-21DB-FDC9-FA628B24DED1">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>5E2EA27F-70A9-E419-6F45-D825783EF8B4</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<constraintName>chk_sensor_tipo</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F6496FA-FBF4-7B28-17DD-D97323F211BE</domain>
+<listOfValues>
+<valueDef value="Fósforo" description=""/>
+<valueDef value="Potássio" description=""/>
+<valueDef value="Umidade" description=""/>
+<valueDef value="pH" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Modelo" id="05B38EA7-B9D5-A733-09BE-D9C1866982F0">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>C1B72FD9-BEE1-C8D8-2B9A-DC8B3A354589</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>64A845E5-7EE2-FB52-F67C-3EC474F2E87B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data Instalacao" id="039C0414-193A-8DCA-C4D1-7B6E23813EF5">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>2D5D0A8A-D1C9-BAA5-EB95-077C917CB62E</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>11D754A8-2A37-3D0F-9312-B68A25450CCA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="930C199C-049D-B806-8C94-D0EC648EDD03">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>4FE45DD5-677B-81F8-E576-EDFB9DA30ADE</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<constraintName>chk_sensor_status</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2F6496FA-FBF4-7B28-17DD-D97323F211BE</domain>
+<listOfValues>
+<valueDef value="Ativo" description=""/>
+<valueDef value="Inativo" description=""/>
+<valueDef value="Manutenção" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID AreaCultivo" id="D344C055-CEB3-EC5F-CCA8-898860EFAEB6">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>D1697B40-C633-26CE-D792-3F1F19568BEE</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<referedAttribute>C95FACA2-605A-0785-7D48-B6082679C6B1</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C25ED489-76B6-163D-100E-F7B9B19BDBC9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="363503E7-41E4-EE37-B9B1-07359F770D8A" name="pk sensor">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>1D7E6BB5-7D1B-AFF4-392B-28DDA29BC6CB</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>396D7A25-0B90-EC06-A6E5-3B6AC0BE2F43</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

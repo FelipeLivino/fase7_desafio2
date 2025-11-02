@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Cultura" directorySegmentName="seg_0" id="BD88B1FD-7569-8B36-1E73-422582154D5D">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Nivel_Ideal_K_Min" id="52052624-3093-559F-CC84-7719D52C546E">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_Cultura" id="5A824B4C-4099-F3AB-DF49-4D5D1BE480BB">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nivel_Ideal_P_Min" id="64DA9956-638D-70FB-42A6-C0DE2A7AAAAD">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nome_Cultura" id="6AB5A230-6D2D-28C0-5573-66CBFA2B19B2">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nivel_Ideal_Umidade_Min" id="7A58C7CD-12ED-D17E-8D92-87562ED0C35E">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Descricao" id="A1EE1FE6-F2F9-C388-9A57-F151043164CD">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nivel_Ideal_P_Max" id="A55BCA7E-9EB7-DA63-11E4-9330B23FC702">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nivel_Ideal_pH_Max" id="AAB512EA-41B1-9D5B-4D53-EC047F9F1A27">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nivel_Ideal_K_Max" id="B68F04FB-F472-A8D7-49DF-0CB00284F052">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nivel_Ideal_Umidade_Max" id="C918270F-8CEE-981C-9EA7-803D2CDD4081">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nivel_Ideal_pH_Min" id="F9D823B8-7F70-95BE-F2C3-F5395E7203B1">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_cultura" id="04B55D2E-5287-8029-9558-CF79FF3D7BF1">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

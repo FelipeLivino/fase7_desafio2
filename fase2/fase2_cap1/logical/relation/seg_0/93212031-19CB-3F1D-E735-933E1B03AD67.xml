@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_sugestao_area" directorySegmentName="seg_0" id="93212031-19CB-3F1D-E735-933E1B03AD67">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>FB73A4EB-12D2-A356-C6FF-F776AC91068A</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<sourcePk>48EE0324-64AD-445C-5577-611E314C38C5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>75C8E0CF-5F42-8A3F-3481-65923AFDB4D5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>24F874BB-CEA8-2A90-2C52-72D75E5F1D62</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

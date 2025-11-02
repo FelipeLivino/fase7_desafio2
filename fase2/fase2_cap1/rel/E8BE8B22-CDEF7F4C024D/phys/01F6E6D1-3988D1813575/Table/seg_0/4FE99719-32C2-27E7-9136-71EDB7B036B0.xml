@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="AjusteAplicacao" directorySegmentName="seg_0" id="4FE99719-32C2-27E7-9136-71EDB7B036B0">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Quantidade_Aplicada" id="0D20648F-EF18-B541-989C-2E9E382114F7">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Tipo_Ajuste" id="1A219B9C-73C3-C3B7-C732-0AF7C95BB8A4">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_AreaCultivo" id="4F453F5E-5DF0-64C3-638A-11BED9659543">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_Sugestao_Origem" id="79DF646B-66D1-33E8-9204-234E423D0D66">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DataHora_Ajuste" id="8B148FA3-5186-DE84-588E-C7A81F6FCAB6">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Unidade_Medida" id="ABEB4EA6-3F08-41F6-9A25-921BB7D2A6F8">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_Ajuste" id="DEB64AB8-3670-ABB9-768B-B026C5B962F7">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_ajuste_area" id="AD34D5CD-2C87-37B1-283F-22844B73C651">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_ajuste_sugestao" id="F254DC5C-9C18-3DAC-5917-E919FE284BFF">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_ajuste_aplicacao" id="0AB55B37-6D8E-23FC-7F9F-9EE560389222">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

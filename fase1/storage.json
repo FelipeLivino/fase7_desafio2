@@ -1,0 +1,56 @@
+[
+    {
+        "cultura": "soja",
+        "area_total": 200.0,
+        "produto": "pesticida A",
+        "insumos": 3.2,
+        "quantidade_ruas": 2.0,
+        "area_rua": 40.0,
+        "area_util": 160.0
+    },
+    {
+        "cultura": "soja",
+        "area_total": 200.0,
+        "produto": "pesticida C",
+        "insumos": 8.7,
+        "quantidade_ruas": 2.0,
+        "area_rua": 40.0,
+        "area_util": 160.0
+    },
+    {
+        "cultura": "milho",
+        "area_total": 7853.981633974483,
+        "produto": "pesticida B",
+        "insumos": 232.61944901923448,
+        "quantidade_ruas": 2,
+        "area_rua": 100.0,
+        "area_util": 7753.981633974483
+    },
+    {
+        "cultura": "soja",
+        "area_total": 37500.0,
+        "produto": "pesticida A",
+        "insumos": 6000.0,
+        "quantidade_ruas": 30.0,
+        "area_rua": 7500.0,
+        "area_util": 30000.0
+    },
+    {
+        "cultura": "soja",
+        "area_total": 525.0,
+        "produto": "pesticida C",
+        "insumos": 6.3,
+        "quantidade_ruas": 3.0,
+        "area_rua": 105.0,
+        "area_util": 420.0
+    },
+    {
+        "cultura": "soja",
+        "area_total": 680000.0,
+        "produto": "pesticida f",
+        "insumos": 108800.0,
+        "quantidade_ruas": 40.0,
+        "area_rua": 136000.0,
+        "area_util": 544000.0
+    }
+]

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FB73A4EB-12D2-A356-C6FF-F776AC91068A" containerWithKeyObject="037E7C99-5D80-D685-502B-D361F215F2B8" localFKIndex="18B3F6FB-018F-D9F9-FD45-F476DA0EFE39" name="fk_sugestao_area">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>179E1A9E-C904-1EC8-507C-F7B7AA53B555</importedID>
+<referredTableLongName>AreaCultivo</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>201A8973-A798-2E3B-EB2E-DF77C7846EA4</referredTableID>
+<keyObject>D967F21E-6A93-B1F7-14A1-CAA3C7CB3329</keyObject>
+<referredKeyID>D967F21E-6A93-B1F7-14A1-CAA3C7CB3329</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_AreaCultivo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

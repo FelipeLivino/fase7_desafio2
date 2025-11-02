@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1ADE746E-64D2-ECE1-B335-FBC605BB79E3" name="LeituraSensor">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>C9373741-F68D-E38D-76BC-B290F1185A4C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Leitura" id="D1427A6C-9B0B-46BA-4B88-83512C33143A">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>37B84664-009D-1125-A568-2E840DC3A1C1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>6E3DAAC2-BE8B-2803-45B2-63886FEFD05B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataHora_Leitura" id="1F5CD376-16A6-F119-46E4-A447DC0D9AB7">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>5E53B3F8-5180-9368-9421-6E9E4EA0C7E4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>35920E86-93FD-509C-43F9-86580F4B17D2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Valor_Lido" id="01BE9654-4F2D-D52D-21C6-9152F621E6D6">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>F32D54DF-7A2D-90C7-7D87-028284AE4109</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BFF1954C-CC3A-0BF6-DC64-99FF2F6BF3C3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Sensor" id="57DB4957-6BFE-63F7-45C9-6C560CC1E8D3">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>1C5CAFC5-DDCB-9F6A-5AFF-58ABCE574D22</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C25ED489-76B6-163D-100E-F7B9B19BDBC9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A042D603-B2A3-3FD5-960C-8FE7ED1169FA" referredColumn="6CEA577B-5B3B-EA00-19CE-5011772A6DDE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FE8D29D9-674D-2D29-7683-4B589842A9C8" name="pk_leitura_sensor">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>7F5058D6-7631-79F5-4197-B48F5B2BCB41</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1427A6C-9B0B-46BA-4B88-83512C33143A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56CE9821-993A-681C-E9A9-9499A52113FF" name="fk_leitura_sensor">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57DB4957-6BFE-63F7-45C9-6C560CC1E8D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

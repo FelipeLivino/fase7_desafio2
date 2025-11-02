@@ -1,0 +1,5 @@
+.allai
+**/*.localz
+**/*.local
+**/*.git
+**/*.DS_Store

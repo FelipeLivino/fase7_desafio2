@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B0E7FE77-0E66-AC8E-E783-D652119E5110" containerWithKeyObject="4FE99719-32C2-27E7-9136-71EDB7B036B0" localFKIndex="F254DC5C-9C18-3DAC-5917-E919FE284BFF" name="fk_ajuste_sugestao">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>1A822AA8-5D44-A2B3-A891-91337CFEEFF7</importedID>
+<referredTableLongName>SugestaoSistema</referredTableLongName>
+<deleteRule>SET NULL</deleteRule>
+<referredTableID>037E7C99-5D80-D685-502B-D361F215F2B8</referredTableID>
+<keyObject>AADF9785-B984-F4A3-0814-742759999007</keyObject>
+<referredKeyID>AADF9785-B984-F4A3-0814-742759999007</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID_Sugestao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

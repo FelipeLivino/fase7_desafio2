@@ -1,0 +1,7 @@
+train: ../images/treino/
+val: ../images/validacao/
+
+names: # Defina aqui as labels do seu dataset
+  0: "Galinha"
+  1: "Vaca"
+  # ...

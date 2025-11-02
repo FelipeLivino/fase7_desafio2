@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_ajuste_sugestao" directorySegmentName="seg_0" id="6B1D058F-D73E-A15E-C449-3C843B5442DF">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>B0E7FE77-0E66-AC8E-E783-D652119E5110</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<sourcePk>DE502281-2C2F-2D1D-F3EB-979101D179AD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>24F874BB-CEA8-2A90-2C52-72D75E5F1D62</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>18951F7A-9279-7C2D-626D-2A49C8A429F6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>SET NULL</deleteRule>
+</Relation>

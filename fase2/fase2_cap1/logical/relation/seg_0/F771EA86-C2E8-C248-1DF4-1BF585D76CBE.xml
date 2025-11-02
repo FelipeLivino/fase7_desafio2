@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="fk_hist_cultura" directorySegmentName="seg_0" id="F771EA86-C2E8-C248-1DF4-1BF585D76CBE">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:56:23 UTC</createdTime>
+<generatorID>309BC411-BE2C-BF63-8BD2-9B37432E6354</generatorID>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<engineerTo>
+<item key="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" value="true"/>
+</engineerTo>
+<sourcePk>DFDE267D-8574-CDA4-D383-3654587D4670</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3B1D4993-1891-4C09-BF16-DC73E70E154D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>60F88F0F-3C87-9F70-6298-33BB240D8DB9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

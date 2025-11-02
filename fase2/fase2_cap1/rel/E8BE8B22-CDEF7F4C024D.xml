@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="E8BE8B22-2730-FDD0-03B9-CDEF7F4C024D" mainViewID="F61634E2-DFD2-ECC9-E537-5C04A3FD5E76">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:12:44 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>arquivo.sql</fileName>
+<pathName>/Users/felipelivinodossantos/Desktop</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

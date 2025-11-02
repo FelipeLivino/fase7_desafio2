@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="fase2_cap1" id="01529047-518C-A842-096E-000F32789469" version="3.5">
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:12:43 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>01529047-518C-A842-096E-000F32789469</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="72C78A33-9C3F-9B79-7FD3-1C7DF6D0BF64">
+<designStoragePath>/arquivo</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

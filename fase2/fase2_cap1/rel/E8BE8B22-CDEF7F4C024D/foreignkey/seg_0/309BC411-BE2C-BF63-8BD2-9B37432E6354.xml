@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="309BC411-BE2C-BF63-8BD2-9B37432E6354" containerWithKeyObject="9A32A99E-324B-E459-F8F2-3DA801BA951C" localFKIndex="E02B0C63-5386-3604-AD38-D5FEDDC3E662" name="fk_hist_cultura">
+<sourceDDLFile>arquivo.sql</sourceDDLFile>
+<createdBy>felipelivinodossantos</createdBy>
+<createdTime>2025-04-13 23:46:58 UTC</createdTime>
+<ownerDesignName>fase2_cap1</ownerDesignName>
+<importedID>D963185D-CB47-C61B-25CE-32DBAE83AA52</importedID>
+<referredTableLongName>Cultura</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BD88B1FD-7569-8B36-1E73-422582154D5D</referredTableID>
+<keyObject>04B55D2E-5287-8029-9558-CF79FF3D7BF1</keyObject>
+<referredKeyID>04B55D2E-5287-8029-9558-CF79FF3D7BF1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Cultura</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
