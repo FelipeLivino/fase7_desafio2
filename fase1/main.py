@@ -5,7 +5,12 @@ from src.engine import get_form_plantio, save_json, load_json, convert_ml_to_l
 dados_plantio = []
 
 
+import sys
+
 def run_project():
+    if not sys.stdout.isatty():
+        print("Este script é interativo e deve ser executado em um terminal.")
+        return
 
     while True:
         exibir_menu()

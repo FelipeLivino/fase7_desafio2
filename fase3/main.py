@@ -11,7 +11,7 @@ from src.predict import ModelPredicter
 
 import requests
 
-DATABASE_URL = "sqlite:///./banco.db"
+DATABASE_URL = "sqlite:///:memory:"
 model_predicter = ModelPredicter()
 
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
@@ -65,6 +65,15 @@ def criar_leitura(leitura: LeituraCreate, db: Session = Depends(get_db)):
     db_leitura = Leitura(**leitura.model_dump())
     db.add(db_leitura)
     db.commit()
+    
+    # Limita o número de registros a 5000
+    num_leituras = db.query(Leitura).count()
+    if num_leituras > 5000:
+        leituras_a_remover = db.query(Leitura).order_by(Leitura.timestamp.asc()).limit(num_leituras - 5000).all()
+        for l in leituras_a_remover:
+            db.delete(l)
+        db.commit()
+
     db.refresh(db_leitura)
     return db_leitura
 
