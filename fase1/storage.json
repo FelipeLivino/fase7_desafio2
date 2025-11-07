@@ -52,5 +52,41 @@
         "quantidade_ruas": 40.0,
         "area_rua": 136000.0,
         "area_util": 544000.0
+    },
+    {
+        "cultura": "milho",
+        "area_total": 314.1592653589793,
+        "produto": "pesticida A",
+        "insumos": 0.5883185307179587,
+        "quantidade_ruas": 2,
+        "area_rua": 20.0,
+        "area_util": 294.1592653589793
+    },
+    {
+        "cultura": "milho",
+        "area_total": 78.53981633974483,
+        "produto": "A pesticida",
+        "insumos": 0.6853981633974483,
+        "quantidade_ruas": 2,
+        "area_rua": 10.0,
+        "area_util": 68.53981633974483
+    },
+    {
+        "cultura": "soja",
+        "area_total": 100.0,
+        "produto": "Fungicida",
+        "insumos": 4.0,
+        "quantidade_ruas": 2.0,
+        "area_rua": 20.0,
+        "area_util": 80.0
+    },
+    {
+        "cultura": "milho",
+        "area_total": 78.53981633974483,
+        "produto": "Fungicida",
+        "insumos": 6.853981633974484,
+        "quantidade_ruas": 2,
+        "area_rua": 10.0,
+        "area_util": 68.53981633974483
     }
 ]
