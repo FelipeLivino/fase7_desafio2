@@ -1,9 +1,12 @@
 import joblib
 from typing import List
+import os
 
 from src.schemas import PredictCreate
 
-path_model = "./saved_models/RandomForest_model.joblib"
+# Construct the absolute path to the model file
+path_model = os.path.join(os.path.dirname(__file__), '..', 'saved_models', 'RandomForest_model.joblib')
+
 class ModelPredicter:
     def __init__(self):
         self.model = joblib.load(path_model)

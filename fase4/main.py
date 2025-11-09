@@ -11,15 +11,17 @@ from src.predict import ModelPredicter
 
 import requests
 
-DATABASE_URL = "sqlite:///:memory:"
+DATABASE_URL = "sqlite:///./database.db"
 model_predicter = ModelPredicter()
 
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(bind=engine)
 
-Base.metadata.create_all(bind=engine)
-
 app = FastAPI()
+
+@app.on_event("startup")
+def on_startup():
+    Base.metadata.create_all(bind=engine)
 
 # Dependência para injetar sessão do banco
 def get_db():

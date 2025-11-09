@@ -32,6 +32,7 @@ load_dotenv()
 #---------------------------------------------------------------------#
 @st.cache_data(ttl=REFRESH_S)
 def listar_sensores():
+    print("{API_URL}/sensores/")
     r = requests.get(f"{API_URL}/sensores/")
     r.raise_for_status()
     return r.json()
