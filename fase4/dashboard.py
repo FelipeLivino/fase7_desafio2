@@ -5,6 +5,9 @@ import requests
 from datetime import datetime
 import os
 from dotenv import load_dotenv
+
+
+from simulator.simulator import execSimulator
 # import google.generativeai as genai ### NOVO ###
 
 #---------------------------------------------------------------------#
@@ -97,11 +100,18 @@ def criar_leitura(sensor_id, valor):
     r.raise_for_status()
     st.success(f"Leitura {valor} registrada para sensor {sensor_id}")
 
+def executar_simulador():
+    execSimulator()
+
 #---------------------------------------------------------------------#
 # SIDEBAR – seleção e ações rápidas (sem alteração)                    #
 #---------------------------------------------------------------------#
 with st.sidebar:
     st.header("⚙️ Configurações")
+    st.subheader("Executar simulador")
+    if st.button("Executar simulador"):
+        executar_simulador()
+        st.cache_data.clear()
     st.subheader("Novo sensor")
     nome_sensor = st.text_input("Nome")
     if st.button("Criar"):

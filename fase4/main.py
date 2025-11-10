@@ -9,6 +9,7 @@ from src.schemas import *
 from sqlalchemy.orm import joinedload
 from src.predict import ModelPredicter
 
+
 import requests
 
 DATABASE_URL = "sqlite:///./database.db"
