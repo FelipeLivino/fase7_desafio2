@@ -2,7 +2,7 @@
 FROM python:3.10-slim
 
 # Install git, which is required for torch.hub.load with a local repository
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git libgl1 libglib2.0-0
 
 # Set the working directory
 WORKDIR /app

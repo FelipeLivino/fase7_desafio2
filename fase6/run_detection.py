@@ -19,11 +19,14 @@ YOLO_REPO_PATH = 'treinamento/yolov5'
 
 def main():
     """
-    Função principal para rodar a detecção de objetos em uma imagem estática.
+    Função principal para rodar a detecção de objetos em imagens de uma pasta.
     """
-    # --- Configuration for Static Image ---
-    IMAGE_PATH = 'treinamento/images/teste/405.jpeg'
-    OUTPUT_IMAGE_PATH = 'detection_result.jpg'
+    # --- Configuration for Static Image Folder ---
+    INPUT_FOLDER = '/app/fase6/input_images'
+    OUTPUT_FOLDER = '/app/fase6/output_detections'
+
+    # Cria a pasta de saída se não existir
+    os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
     # Define o dispositivo: usa a GPU (cuda) se estiver disponível, senão a CPU
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -42,29 +45,31 @@ def main():
         print(f"Verifique se o YOLO_REPO_PATH está configurado corretamente para: {os.path.abspath(YOLO_REPO_PATH)}")
         return
 
-    print(f"Carregando a imagem de: {IMAGE_PATH}")
-    # Carrega a imagem estática
-    frame = cv2.imread(IMAGE_PATH)
+    print(f"Processando imagens da pasta: {INPUT_FOLDER}")
+    # Lista todos os arquivos na pasta de entrada
+    for filename in os.listdir(INPUT_FOLDER):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
+            image_path = os.path.join(INPUT_FOLDER, filename)
+            print(f"Carregando a imagem de: {image_path}")
+            frame = cv2.imread(image_path)
 
-    if frame is None:
-        print(f"Erro ao carregar a imagem. Verifique o caminho: {IMAGE_PATH}")
-        return
+            if frame is None:
+                print(f"Erro ao carregar a imagem. Verifique o caminho: {image_path}")
+                continue
 
-    print("Iniciando a detecção na imagem...")
-    # Executa a inferência no frame
-    results = model(frame)
+            print(f"Iniciando a detecção na imagem: {filename}...")
+            # Executa a inferência no frame
+            results = model(frame)
 
-    # Renderiza os resultados no frame
-    rendered_frame = np.squeeze(results.render())
+            # Renderiza os resultados no frame
+            rendered_frame = np.squeeze(results.render())
 
-    # Salva a imagem com as detecções
-    cv2.imwrite(OUTPUT_IMAGE_PATH, rendered_frame)
-    print(f"Detecção concluída. Resultado salvo em: {OUTPUT_IMAGE_PATH}")
+            # Salva a imagem com as detecções na pasta de saída
+            output_image_path = os.path.join(OUTPUT_FOLDER, f"detected_{filename}")
+            cv2.imwrite(output_image_path, rendered_frame)
+            print(f"Detecção concluída. Resultado salvo em: {output_image_path}")
 
-    # Opcional: exibir a imagem se estiver em um ambiente com GUI
-    # cv2.imshow('YOLOv5 Detection Result', rendered_frame)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    print("Processamento de todas as imagens concluído.")
 
 if __name__ == '__main__':
     main()
