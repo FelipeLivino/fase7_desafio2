@@ -28,6 +28,23 @@ services:
     depends_on:
       - fase2-db
 
+  fase4-db:
+    image: postgres:13
+    container_name: fase4-db
+    volumes:
+      - fase4_postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d database"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   fase4-app:
     build: ./fase4
     container_name: fase4-app
@@ -35,7 +52,10 @@ services:
       - "8002:8000" # API
       - "8503:8501" # Streamlit
     depends_on:
-      - fase2-db
+      fase4-db:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://user:password@fase4-db:5432/database
 
   fase6-app:
     build: ./fase6
@@ -45,3 +65,4 @@ services:
 
 volumes:
   pgdata:
+  fase4_postgres_data:
