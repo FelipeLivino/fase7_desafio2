@@ -62,6 +62,8 @@ services:
     container_name: fase6-app
     volumes:
       - ./fase6:/app
+      - ./fase6/input_images:/app/fase6/input_images
+      - ./fase6/output_detections:/app/fase6/output_detections
 
 volumes:
   pgdata:
