@@ -4,8 +4,9 @@ services:
   fase1-cli:
     build: ./fase1
     container_name: fase1-cli
-    depends_on:
-      - fase2-db
+    ports:
+      - "8501:8501"
+
 
   fase2-db:
     build: ./fase2

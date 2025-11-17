@@ -16,6 +16,9 @@ COPY app_streamlit.py .
 # Criar diretório para dados (storage.json)
 RUN mkdir -p /app/data
 
+# Instalar R e dependências necessárias
+RUN apt-get update && apt-get install -y r-base r-base-dev && rm -rf /var/lib/apt/lists/*
+
 # Criar diretório para scripts R (caso existam)
 RUN mkdir -p /app/projeto_r/services
 
@@ -28,4 +31,4 @@ ENV STREAMLIT_SERVER_ENABLECORS=false
 ENV STREAMLIT_SERVER_ENABLEXSRFPROTECTION=false
 
 # Comando para executar a aplicação
-CMD ["streamlit", "run", "app_streamlit.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app_streamlit.py", "--server.port=8501"]
