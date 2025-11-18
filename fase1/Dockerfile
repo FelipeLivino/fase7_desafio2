@@ -1,11 +1,27 @@
 # Use imagem oficial do Python
 FROM python:3.9-slim
 
+# Atualiza e instala dependências do R
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    r-base \
+    r-base-dev \
+    build-essential \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    gnupg \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN R -e "install.packages(c('plumber', 'httr', 'jsonlite'), repos='https://cloud.r-project.org')"
+
 # Definir diretório de trabalho
 WORKDIR /app
 
 # Copiar arquivo de requirements primeiro (para cache de layers)
 COPY requirements.txt .
+
+COPY projeto_r ./projeto_r
 
 # Instalar dependências
 RUN pip install --no-cache-dir -r requirements.txt
@@ -15,12 +31,6 @@ COPY app_streamlit.py .
 
 # Criar diretório para dados (storage.json)
 RUN mkdir -p /app/data
-
-# Instalar R e dependências necessárias
-RUN apt-get update && apt-get install -y r-base r-base-dev && rm -rf /var/lib/apt/lists/*
-
-# Criar diretório para scripts R (caso existam)
-RUN mkdir -p /app/projeto_r/services
 
 # Expor porta do Streamlit
 EXPOSE 8501
