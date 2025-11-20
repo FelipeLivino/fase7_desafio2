@@ -4,6 +4,8 @@ import requests
 
 valores_sensores = {}
 
+API_URL = "http://localhost:8004"
+
 def sensor_simulator(sensor_name, valor_sensor = 0):
     if valor_sensor == 0:
         if "temperature" in sensor_name.lower():
@@ -28,11 +30,11 @@ def sensor_simulator(sensor_name, valor_sensor = 0):
 
 
 def create_sensors():
-    sensor_temperature = requests.post("http://localhost:8000/sensores/", json={"nome": "sensor_temperature"})
-    sensor_humidity = requests.post("http://localhost:8000/sensores/", json={"nome": "sensor_humidity"})
-    sensor_ph = requests.post("http://localhost:8000/sensores/", json={"nome": "sensor_ph"})
-    sensor_p = requests.post("http://localhost:8000/sensores/", json={"nome": "sensor_p"})
-    sensor_k = requests.post("http://localhost:8000/sensores/", json={"nome": "sensor_k"})
+    sensor_temperature = requests.post(f"{API_URL}/sensores/", json={"nome": "sensor_temperature"})
+    sensor_humidity = requests.post(f"{API_URL}/sensores/", json={"nome": "sensor_humidity"})
+    sensor_ph = requests.post(f"{API_URL}/sensores/", json={"nome": "sensor_ph"})
+    sensor_p = requests.post(f"{API_URL}/sensores/", json={"nome": "sensor_p"})
+    sensor_k = requests.post(f"{API_URL}/sensores/", json={"nome": "sensor_k"})
 
 
     return [sensor_temperature.json(), sensor_humidity.json(), sensor_ph.json(), sensor_p.json(), sensor_k.json()]
@@ -44,7 +46,7 @@ def execSimulator():
         print("Simulando leitura")
 
         #resgatar sensores
-        response = requests.get("http://localhost:8000/sensores/")
+        response = requests.get(f"{API_URL}/sensores/")
         sensores = response.json()
 
         if not sensores:
@@ -58,10 +60,10 @@ def execSimulator():
 
             print(f"Valor sensor {sensor['nome']}: {valor}")
             
-            response = requests.post(f"http://localhost:8000/leituras/", json={"valor": valor, "sensor_id": sensor['id']})
+            response = requests.post(f"{API_URL}/leituras/", json={"valor": valor, "sensor_id": sensor['id']})
             print(response.json())
             valores_sensores[sensor['nome']] = valor
 
         #prever
-        response = requests.post("http://localhost:8000/predict", json={"sensor_humidity": valores_sensores['sensor_humidity'], "sensor_k": valores_sensores['sensor_k'], "sensor_p": valores_sensores['sensor_p'], "sensor_ph": valores_sensores['sensor_ph'], "sensor_temperature": valores_sensores['sensor_temperature']})
+        response = requests.post(f"{API_URL}/predict", json={"sensor_humidity": valores_sensores['sensor_humidity'], "sensor_k": valores_sensores['sensor_k'], "sensor_p": valores_sensores['sensor_p'], "sensor_ph": valores_sensores['sensor_ph'], "sensor_temperature": valores_sensores['sensor_temperature']})
         print(response.json())

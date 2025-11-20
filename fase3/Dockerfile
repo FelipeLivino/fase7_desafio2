@@ -13,12 +13,16 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
+# Install dos2unix and fix CRLF issues
+RUN apt-get update && apt-get install -y dos2unix \
+    && dos2unix /app/start.sh
+
 # Make the start script executable
 RUN chmod +x start.sh
 
 # Expose the ports for the backend (8000) and frontend (8501)
-EXPOSE 8000
-EXPOSE 8501
+EXPOSE 8003
+EXPOSE 8503
 
 # Command to run the start script
 CMD ["./start.sh"]

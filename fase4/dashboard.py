@@ -13,7 +13,7 @@ from simulator.simulator import execSimulator
 #---------------------------------------------------------------------#
 # CONFIGURAÇÕES GERAIS                                                #
 #---------------------------------------------------------------------#
-API_URL   = "http://127.0.0.1:8000"      # ajuste se a API rodar noutro host
+API_URL   = "http://127.0.0.1:8004"      # ajuste se a API rodar noutro host
 REFRESH_S = 10                           # intervalo de atualização (segundos)
 
 st.set_page_config(page_title="FarmTech – Dashboard",
