@@ -24,8 +24,8 @@ services:
     build: ./fase3
     container_name: fase3-app
     ports:
-      - "8001:8000" # API
-      - "8502:8501" # Streamlit
+      - "8003:8003" # API
+      - "8503:8503" # Streamlit
     depends_on:
       - fase2-db
 
@@ -50,8 +50,8 @@ services:
     build: ./fase4
     container_name: fase4-app
     ports:
-      - "8002:8000" # API
-      - "8503:8501" # Streamlit
+      - "8004:8004" # API
+      - "8504:8504" # Streamlit
     depends_on:
       fase4-db:
         condition: service_healthy
@@ -65,6 +65,12 @@ services:
       - ./fase6:/app
       - ./fase6/input_images:/app/fase6/input_images
       - ./fase6/output_detections:/app/fase6/output_detections
+
+  fase7-app:
+    build: ./fase7
+    container_name: fase7-app
+    ports:
+      - "8507:8507"
 
 volumes:
   pgdata:
