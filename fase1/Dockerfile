@@ -11,6 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2-dev \
     gnupg \
     ca-certificates \
+    # Dependências de sistema adicionadas para plumber, s2, units, systemfonts e sodium
+    libudunits2-dev \
+    libfontconfig1-dev \
+    libfreetype6-dev \
+    libsodium-dev \
+    cmake \
     && rm -rf /var/lib/apt/lists/*
 
 RUN R -e "install.packages(c('plumber', 'httr', 'jsonlite'), repos='https://cloud.r-project.org')"
