@@ -1,8 +1,15 @@
 import cv2
 import torch
 import numpy as np
-from urllib.request import urlopen
 import os
+from alert_service import AlertService
+
+# --- AWS Configuration ---
+# O ARN do tópico SNS para o qual os alertas serão enviados.
+# Substitua pelo ARN do seu tópico SNS ou configure como variável de ambiente.
+# Você pode encontrar o ARN no console da AWS em Simple Notification Service > Topics
+SNS_TOPIC_ARN = os.environ.get("SNS_TOPIC_ARN", "arn:aws:sns:us-east-1:123456789012:MyAlertingTopic")
+
 
 # --- Path Configuration ---
 # Build paths relative to the script's location for robustness
@@ -11,11 +18,33 @@ MODEL_PATH = os.path.join(SCRIPT_DIR, 'best.pt')
 INPUT_FOLDER = os.path.join(SCRIPT_DIR, 'input_images')
 OUTPUT_FOLDER = os.path.join(SCRIPT_DIR, 'output_detections')
 
-# --- Other Configurations ---
-# URL do stream de vídeo da Raspberry Pi
-STREAM_URL = 'http://192.168.0.142:5000/video_feed' 
 
-# --- Main Application ---
+def process_detection_results(results, filename, alert_service):
+    """
+    Processa os resultados da detecção, extrai informações sobre os animais
+    e envia alertas se animais doentes forem detectados.
+    """
+    labels = results.pandas().xyxy[0]['name'].tolist()
+    sick_animals = [label for label in labels if "doente" in label.lower()]
+
+    if sick_animals:
+        print(f"Atenção: Animais doentes detectados na imagem {filename}: {', '.join(sick_animals)}")
+        
+        # Prepara a mensagem de alerta
+        animal_id = filename.split('.')[0]
+        status = "Doente"
+        action = "Veterinário acionado para avaliação e tratamento."
+        message = f"Alerta de Saúde Animal:\n\n" \
+                  f"Animal ID (imagem): {animal_id}\n" \
+                  f"Status Detectado: {status} ({', '.join(sick_animals)})\n" \
+                  f"Ação Sugerida: {action}"
+        subject = f"Alerta de Saúde Animal: {animal_id}"
+
+        # Envia o alerta
+        alert_service.send_alert(SNS_TOPIC_ARN, message, subject)
+    else:
+        print(f"Nenhum animal doente detectado na imagem {filename}.")
+
 
 def main():
     """
@@ -23,6 +52,9 @@ def main():
     """
     # Cria a pasta de saída se não existir
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+
+    # Inicializa o serviço de alerta
+    alert_service = AlertService(region_name='us-east-1')
 
     # Define o dispositivo: usa a GPU (cuda) se estiver disponível, senão a CPU
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -33,7 +65,6 @@ def main():
 
     print("Carregando modelo YOLOv5...")
     # Carrega o modelo do hub do PyTorch, usando o repositório oficial do YOLOv5.
-    # Isso fará o download do modelo na primeira execução.
     model = torch.hub.load('ultralytics/yolov5', 'custom', path=MODEL_PATH, trust_repo=True)
     model.to(device)
 
@@ -52,6 +83,9 @@ def main():
             print(f"Iniciando a detecção na imagem: {filename}...")
             # Executa a inferência no frame
             results = model(frame)
+
+            # Processa os resultados da detecção e envia alertas se necessário
+            process_detection_results(results, filename, alert_service)
 
             # Renderiza os resultados no frame
             rendered_frame = np.squeeze(results.render())

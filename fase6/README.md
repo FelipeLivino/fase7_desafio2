@@ -38,6 +38,51 @@ Utilizando a robusta arquitetura **YOLOv5**, o objetivo foi treinar um modelo ca
 
 Além do treinamento, o projeto avança para uma demonstração prática de ponta a ponta, implementando o modelo treinado em um sistema de *Edge AI*. Esta segunda fase utiliza um **Raspberry Pi** para capturar e transmitir vídeo em tempo real, validando a aplicação da solução em um cenário que simula o ambiente de produção.
 
+## Serviço de Alerta com AWS SNS
+
+Para complementar o sistema de detecção, foi implementado um serviço de alerta utilizando o **AWS Simple Notification Service (SNS)**. Este serviço envia notificações (e-mail ou SMS) para os funcionários da fazenda sempre que um animal é classificado como "doente" pelo modelo de visão computacional.
+
+### Como configurar
+
+Para que o serviço de alerta funcione, você precisa configurar suas credenciais da AWS e o ARN do tópico SNS.
+
+1.  **Credenciais da AWS:**
+    O script utiliza a biblioteca `boto3` para se conectar à AWS. As credenciais devem ser configuradas como variáveis de ambiente:
+    ```bash
+    export AWS_ACCESS_KEY_ID="SUA_CHAVE_DE_ACESSO"
+    export AWS_SECRET_ACCESS_KEY="SUA_CHAVE_SECRETA"
+    ```
+    Substitua `"SUA_CHAVE_DE_ACESSO"` e `"SUA_CHAVE_SECRETA"` pelas suas credenciais da AWS.
+
+2.  **ARN do Tópico SNS:**
+    O ARN (Amazon Resource Name) do tópico SNS para o qual os alertas serão enviados também deve ser configurado como uma variável de ambiente:
+    ```bash
+    export SNS_TOPIC_ARN="ARN_DO_SEU_TOPICO_SNS"
+    ```
+    Substitua `"ARN_DO_SEU_TOPICO_SNS"` pelo ARN do seu tópico SNS. Você pode encontrar o ARN no console da AWS em **Simple Notification Service > Topics**.
+
+### Como funciona
+
+1.  O script `run_detection.py` processa as imagens da pasta `input_images`.
+2.  Para cada imagem, o modelo YOLOv5 detecta os objetos presentes.
+3.  O script verifica se algum dos objetos detectados tem um rótulo que contém a palavra "doente".
+4.  Se um animal doente for detectado, o script formata uma mensagem de alerta e a envia para o tópico SNS configurado.
+5.  O SNS, por sua vez, envia a mensagem para todos os inscritos no tópico (e-mails, números de SMS, etc.).
+
+### Exemplo de Alerta
+
+Quando um animal doente é detectado, uma mensagem semelhante à seguinte é enviada:
+
+```
+Assunto: Alerta de Saúde Animal: VACA-001
+
+Alerta de Saúde Animal:
+
+Animal ID (imagem): VACA-001
+Status Detectado: Doente (vaca_doente)
+Ação Sugerida: Veterinário acionado para avaliação e tratamento.
+```
+
 ## Demonstração em Vídeo
 Assista a uma breve demonstração que abrange desde o processo de treinamento e a performance do modelo, até sua aplicação prática em um projeto de detecção de objetos em tempo real com Raspberry Pi e YOLOv5.
 
@@ -119,7 +164,7 @@ O notebook `treinamento/FelipeLivinoDosSantos_rm563187_pbl_fase6.ipynb` também 
 
 1.  **YOLO Customizado (Entrega 1):** O modelo treinado com nosso próprio dataset.
 2.  **YOLO Padrão:** A versão tradicional do YOLO, para avaliar a detecção sem o fine-tuning específico.
-3.  **CNN do Zero:** Uma Rede Neural Convolucional simples, treinada do zero, para classificar as imagens (sem detectar a localização do objeto).
+3.  **CNN do Zero:** Uma Rede Neural Convolucional simple, treinada do zero, para classificar as imagens (sem detectar a localização do objeto).
 
 **Critérios de Avaliação:**
 A comparação entre os modelos foi baseada nos seguintes pontos:
