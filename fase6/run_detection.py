@@ -4,16 +4,16 @@ import numpy as np
 from urllib.request import urlopen
 import os
 
-# --- Configuration ---
+# --- Path Configuration ---
+# Build paths relative to the script's location for robustness
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(SCRIPT_DIR, 'best.pt') 
+INPUT_FOLDER = os.path.join(SCRIPT_DIR, 'input_images')
+OUTPUT_FOLDER = os.path.join(SCRIPT_DIR, 'output_detections')
+
+# --- Other Configurations ---
 # URL do stream de vídeo da Raspberry Pi
-# IMPORTANTE: Substitua pelo endereço IP real da sua Raspberry Pi
 STREAM_URL = 'http://192.168.0.142:5000/video_feed' 
-
-# Caminho para os pesos do modelo YOLOv5
-MODEL_PATH = 'treinamento/yolov5s_60.pt'
-
-# Caminho para o repositório local do YOLOv5
-YOLO_REPO_PATH = 'treinamento/yolov5'
 
 # --- Main Application ---
 
@@ -21,10 +21,6 @@ def main():
     """
     Função principal para rodar a detecção de objetos em imagens de uma pasta.
     """
-    # --- Configuration for Static Image Folder ---
-    INPUT_FOLDER = '/app/fase6/input_images'
-    OUTPUT_FOLDER = '/app/fase6/output_detections'
-
     # Cria a pasta de saída se não existir
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
@@ -36,14 +32,10 @@ def main():
         print("AVISO: CUDA não está disponível. Rodando na CPU.")
 
     print("Carregando modelo YOLOv5...")
-    # Carrega o modelo do repositório local
-    try:
-        model = torch.hub.load(YOLO_REPO_PATH, 'custom', path=MODEL_PATH, source='local')
-        model.to(device)
-    except Exception as e:
-        print(f"Erro ao carregar o modelo: {e}")
-        print(f"Verifique se o YOLO_REPO_PATH está configurado corretamente para: {os.path.abspath(YOLO_REPO_PATH)}")
-        return
+    # Carrega o modelo do hub do PyTorch, usando o repositório oficial do YOLOv5.
+    # Isso fará o download do modelo na primeira execução.
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path=MODEL_PATH, trust_repo=True)
+    model.to(device)
 
     print(f"Processando imagens da pasta: {INPUT_FOLDER}")
     # Lista todos os arquivos na pasta de entrada
