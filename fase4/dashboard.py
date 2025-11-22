@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 from datetime import datetime
 import os
+import time
 from dotenv import load_dotenv
 
 
@@ -111,7 +112,10 @@ with st.sidebar:
     st.subheader("Executar simulador")
     if st.button("Executar simulador"):
         executar_simulador()
+        st.info("Simulador executado. A página será atualizada em 10 segundos...")
+        time.sleep(10)
         st.cache_data.clear()
+        st.rerun()
     st.subheader("Novo sensor")
     nome_sensor = st.text_input("Nome")
     if st.button("Criar"):
