@@ -1,12 +1,9 @@
-
-
 services:
   fase1-cli:
     build: ./fase1
     container_name: fase1-cli
     ports:
       - "8501:8501"
-
 
   fase2-db:
     build: ./fase2
@@ -66,6 +63,8 @@ services:
     volumes:
       - ./fase6/input_images:/app/input_images
       - ./fase6/output_detections:/app/output_detections
+    env_file:
+      - .env
 
   fase7-app:
     build: ./fase7

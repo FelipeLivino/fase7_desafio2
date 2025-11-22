@@ -18,7 +18,7 @@ if 'pathlib._local' not in sys.modules:
 # O ARN do tópico SNS para o qual os alertas serão enviados.
 # Substitua pelo ARN do seu tópico SNS ou configure como variável de ambiente.
 # Você pode encontrar o ARN no console da AWS em Simple Notification Service > Topics
-SNS_TOPIC_ARN = os.environ.get("SNS_TOPIC_ARN", "arn:aws:sns:us-east-1:123456789012:MyAlertingTopic")
+SNS_TOPIC_ARN = os.environ.get("SNS_TOPIC_ARN")
 
 
 # --- Path Configuration ---
@@ -58,7 +58,7 @@ def main():
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
     # Inicializa o serviço de alerta
-    alert_service = AlertService(region_name='us-east-1')
+    alert_service = AlertService(region_name='sa-east-1')
 
     print("Carregando modelo YOLOv5...")
     # Carrega o modelo

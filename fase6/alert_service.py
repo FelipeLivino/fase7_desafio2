@@ -2,7 +2,7 @@ import boto3
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
 class AlertService:
-    def __init__(self, region_name='us-east-1'):
+    def __init__(self, region_name='sa-east-1'):
         """
         Inicializa o serviço de alerta com a região da AWS.
         As credenciais da AWS (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
@@ -40,9 +40,9 @@ class AlertService:
 if __name__ == '__main__':
     # Substitua pelo ARN do seu tópico SNS
     # Você pode encontrar o ARN no console da AWS em Simple Notification Service > Topics
-    SNS_TOPIC_ARN = "arn:aws:sns:us-east-1:123456789012:MyAlertingTopic"
+    SNS_TOPIC_ARN = "arn:aws:sns:sa-east-1:905055906634:fiap"
     
-    alert_service = AlertService(region_name='us-east-1')
+    alert_service = AlertService(region_name='sa-east-1')
 
     # Exemplo de mensagem de alerta
     animal_id = "VACA-001"
