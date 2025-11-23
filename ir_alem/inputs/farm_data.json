@@ -1,0 +1,609 @@
+{
+    "metadata": {
+        "num_items": 100,
+        "seed": 42,
+        "budget": 2641
+    },
+    "items": [
+        {
+            "id": 0,
+            "name": "Aluguel_Maquinas_1",
+            "cost": 24,
+            "productivity": 19
+        },
+        {
+            "id": 1,
+            "name": "Variedade_Sementes_2",
+            "cost": 41,
+            "productivity": 39
+        },
+        {
+            "id": 2,
+            "name": "Aluguel_Maquinas_3",
+            "cost": 23,
+            "productivity": 29
+        },
+        {
+            "id": 3,
+            "name": "Contrato_Trabalho_4",
+            "cost": 21,
+            "productivity": 25
+        },
+        {
+            "id": 4,
+            "name": "Fertilizante_5",
+            "cost": 13,
+            "productivity": 11
+        },
+        {
+            "id": 5,
+            "name": "Pesticida_6",
+            "cost": 74,
+            "productivity": 90
+        },
+        {
+            "id": 6,
+            "name": "Contrato_Trabalho_7",
+            "cost": 35,
+            "productivity": 45
+        },
+        {
+            "id": 7,
+            "name": "Aluguel_Maquinas_8",
+            "cost": 79,
+            "productivity": 86
+        },
+        {
+            "id": 8,
+            "name": "Plano_Irrigacao_9",
+            "cost": 85,
+            "productivity": 84
+        },
+        {
+            "id": 9,
+            "name": "Fertilizante_10",
+            "cost": 30,
+            "productivity": 38
+        },
+        {
+            "id": 10,
+            "name": "Variedade_Sementes_11",
+            "cost": 45,
+            "productivity": 40
+        },
+        {
+            "id": 11,
+            "name": "Variedade_Sementes_12",
+            "cost": 23,
+            "productivity": 19
+        },
+        {
+            "id": 12,
+            "name": "Fertilizante_13",
+            "cost": 55,
+            "productivity": 76
+        },
+        {
+            "id": 13,
+            "name": "Contrato_Trabalho_14",
+            "cost": 43,
+            "productivity": 58
+        },
+        {
+            "id": 14,
+            "name": "Aluguel_Maquinas_15",
+            "cost": 68,
+            "productivity": 79
+        },
+        {
+            "id": 15,
+            "name": "Plano_Irrigacao_16",
+            "cost": 20,
+            "productivity": 23
+        },
+        {
+            "id": 16,
+            "name": "Aluguel_Maquinas_17",
+            "cost": 89,
+            "productivity": 126
+        },
+        {
+            "id": 17,
+            "name": "Variedade_Sementes_18",
+            "cost": 83,
+            "productivity": 77
+        },
+        {
+            "id": 18,
+            "name": "Fertilizante_19",
+            "cost": 15,
+            "productivity": 18
+        },
+        {
+            "id": 19,
+            "name": "Variedade_Sementes_20",
+            "cost": 20,
+            "productivity": 27
+        },
+        {
+            "id": 20,
+            "name": "Fertilizante_21",
+            "cost": 58,
+            "productivity": 57
+        },
+        {
+            "id": 21,
+            "name": "Aluguel_Maquinas_22",
+            "cost": 56,
+            "productivity": 51
+        },
+        {
+            "id": 22,
+            "name": "Variedade_Sementes_23",
+            "cost": 36,
+            "productivity": 45
+        },
+        {
+            "id": 23,
+            "name": "Aluguel_Maquinas_24",
+            "cost": 97,
+            "productivity": 121
+        },
+        {
+            "id": 24,
+            "name": "Contrato_Trabalho_25",
+            "cost": 91,
+            "productivity": 83
+        },
+        {
+            "id": 25,
+            "name": "Aluguel_Maquinas_26",
+            "cost": 41,
+            "productivity": 37
+        },
+        {
+            "id": 26,
+            "name": "Plano_Irrigacao_27",
+            "cost": 44,
+            "productivity": 65
+        },
+        {
+            "id": 27,
+            "name": "Aluguel_Maquinas_28",
+            "cost": 98,
+            "productivity": 116
+        },
+        {
+            "id": 28,
+            "name": "Aluguel_Maquinas_29",
+            "cost": 51,
+            "productivity": 70
+        },
+        {
+            "id": 29,
+            "name": "Fertilizante_30",
+            "cost": 39,
+            "productivity": 53
+        },
+        {
+            "id": 30,
+            "name": "Variedade_Sementes_31",
+            "cost": 61,
+            "productivity": 60
+        },
+        {
+            "id": 31,
+            "name": "Pesticida_32",
+            "cost": 82,
+            "productivity": 115
+        },
+        {
+            "id": 32,
+            "name": "Variedade_Sementes_33",
+            "cost": 37,
+            "productivity": 46
+        },
+        {
+            "id": 33,
+            "name": "Plano_Irrigacao_34",
+            "cost": 92,
+            "productivity": 103
+        },
+        {
+            "id": 34,
+            "name": "Variedade_Sementes_35",
+            "cost": 27,
+            "productivity": 26
+        },
+        {
+            "id": 35,
+            "name": "Contrato_Trabalho_36",
+            "cost": 78,
+            "productivity": 76
+        },
+        {
+            "id": 36,
+            "name": "Contrato_Trabalho_37",
+            "cost": 64,
+            "productivity": 91
+        },
+        {
+            "id": 37,
+            "name": "Plano_Irrigacao_38",
+            "cost": 56,
+            "productivity": 53
+        },
+        {
+            "id": 38,
+            "name": "Pesticida_39",
+            "cost": 75,
+            "productivity": 85
+        },
+        {
+            "id": 39,
+            "name": "Fertilizante_40",
+            "cost": 24,
+            "productivity": 21
+        },
+        {
+            "id": 40,
+            "name": "Pesticida_41",
+            "cost": 97,
+            "productivity": 106
+        },
+        {
+            "id": 41,
+            "name": "Fertilizante_42",
+            "cost": 59,
+            "productivity": 62
+        },
+        {
+            "id": 42,
+            "name": "Plano_Irrigacao_43",
+            "cost": 77,
+            "productivity": 75
+        },
+        {
+            "id": 43,
+            "name": "Contrato_Trabalho_44",
+            "cost": 11,
+            "productivity": 14
+        },
+        {
+            "id": 44,
+            "name": "Fertilizante_45",
+            "cost": 97,
+            "productivity": 137
+        },
+        {
+            "id": 45,
+            "name": "Variedade_Sementes_46",
+            "cost": 92,
+            "productivity": 95
+        },
+        {
+            "id": 46,
+            "name": "Variedade_Sementes_47",
+            "cost": 65,
+            "productivity": 59
+        },
+        {
+            "id": 47,
+            "name": "Fertilizante_48",
+            "cost": 43,
+            "productivity": 63
+        },
+        {
+            "id": 48,
+            "name": "Pesticida_49",
+            "cost": 74,
+            "productivity": 106
+        },
+        {
+            "id": 49,
+            "name": "Aluguel_Maquinas_50",
+            "cost": 48,
+            "productivity": 66
+        },
+        {
+            "id": 50,
+            "name": "Contrato_Trabalho_51",
+            "cost": 87,
+            "productivity": 81
+        },
+        {
+            "id": 51,
+            "name": "Variedade_Sementes_52",
+            "cost": 30,
+            "productivity": 35
+        },
+        {
+            "id": 52,
+            "name": "Contrato_Trabalho_53",
+            "cost": 10,
+            "productivity": 12
+        },
+        {
+            "id": 53,
+            "name": "Plano_Irrigacao_54",
+            "cost": 12,
+            "productivity": 10
+        },
+        {
+            "id": 54,
+            "name": "Variedade_Sementes_55",
+            "cost": 49,
+            "productivity": 47
+        },
+        {
+            "id": 55,
+            "name": "Pesticida_56",
+            "cost": 82,
+            "productivity": 119
+        },
+        {
+            "id": 56,
+            "name": "Fertilizante_57",
+            "cost": 72,
+            "productivity": 98
+        },
+        {
+            "id": 57,
+            "name": "Contrato_Trabalho_58",
+            "cost": 26,
+            "productivity": 23
+        },
+        {
+            "id": 58,
+            "name": "Plano_Irrigacao_59",
+            "cost": 80,
+            "productivity": 73
+        },
+        {
+            "id": 59,
+            "name": "Contrato_Trabalho_60",
+            "cost": 87,
+            "productivity": 95
+        },
+        {
+            "id": 60,
+            "name": "Pesticida_61",
+            "cost": 79,
+            "productivity": 104
+        },
+        {
+            "id": 61,
+            "name": "Aluguel_Maquinas_62",
+            "cost": 35,
+            "productivity": 45
+        },
+        {
+            "id": 62,
+            "name": "Plano_Irrigacao_63",
+            "cost": 95,
+            "productivity": 119
+        },
+        {
+            "id": 63,
+            "name": "Plano_Irrigacao_64",
+            "cost": 76,
+            "productivity": 84
+        },
+        {
+            "id": 64,
+            "name": "Pesticida_65",
+            "cost": 38,
+            "productivity": 32
+        },
+        {
+            "id": 65,
+            "name": "Fertilizante_66",
+            "cost": 85,
+            "productivity": 100
+        },
+        {
+            "id": 66,
+            "name": "Contrato_Trabalho_67",
+            "cost": 38,
+            "productivity": 30
+        },
+        {
+            "id": 67,
+            "name": "Aluguel_Maquinas_68",
+            "cost": 90,
+            "productivity": 75
+        },
+        {
+            "id": 68,
+            "name": "Fertilizante_69",
+            "cost": 14,
+            "productivity": 19
+        },
+        {
+            "id": 69,
+            "name": "Fertilizante_70",
+            "cost": 75,
+            "productivity": 72
+        },
+        {
+            "id": 70,
+            "name": "Aluguel_Maquinas_71",
+            "cost": 72,
+            "productivity": 68
+        },
+        {
+            "id": 71,
+            "name": "Pesticida_72",
+            "cost": 83,
+            "productivity": 99
+        },
+        {
+            "id": 72,
+            "name": "Pesticida_73",
+            "cost": 70,
+            "productivity": 95
+        },
+        {
+            "id": 73,
+            "name": "Pesticida_74",
+            "cost": 22,
+            "productivity": 19
+        },
+        {
+            "id": 74,
+            "name": "Plano_Irrigacao_75",
+            "cost": 55,
+            "productivity": 60
+        },
+        {
+            "id": 75,
+            "name": "Plano_Irrigacao_76",
+            "cost": 16,
+            "productivity": 20
+        },
+        {
+            "id": 76,
+            "name": "Aluguel_Maquinas_77",
+            "cost": 22,
+            "productivity": 18
+        },
+        {
+            "id": 77,
+            "name": "Aluguel_Maquinas_78",
+            "cost": 53,
+            "productivity": 72
+        },
+        {
+            "id": 78,
+            "name": "Fertilizante_79",
+            "cost": 41,
+            "productivity": 38
+        },
+        {
+            "id": 79,
+            "name": "Contrato_Trabalho_80",
+            "cost": 67,
+            "productivity": 60
+        },
+        {
+            "id": 80,
+            "name": "Pesticida_81",
+            "cost": 45,
+            "productivity": 50
+        },
+        {
+            "id": 81,
+            "name": "Fertilizante_82",
+            "cost": 66,
+            "productivity": 90
+        },
+        {
+            "id": 82,
+            "name": "Contrato_Trabalho_83",
+            "cost": 22,
+            "productivity": 18
+        },
+        {
+            "id": 83,
+            "name": "Contrato_Trabalho_84",
+            "cost": 11,
+            "productivity": 16
+        },
+        {
+            "id": 84,
+            "name": "Pesticida_85",
+            "cost": 31,
+            "productivity": 33
+        },
+        {
+            "id": 85,
+            "name": "Plano_Irrigacao_86",
+            "cost": 37,
+            "productivity": 51
+        },
+        {
+            "id": 86,
+            "name": "Fertilizante_87",
+            "cost": 31,
+            "productivity": 33
+        },
+        {
+            "id": 87,
+            "name": "Plano_Irrigacao_88",
+            "cost": 43,
+            "productivity": 62
+        },
+        {
+            "id": 88,
+            "name": "Plano_Irrigacao_89",
+            "cost": 46,
+            "productivity": 50
+        },
+        {
+            "id": 89,
+            "name": "Aluguel_Maquinas_90",
+            "cost": 81,
+            "productivity": 102
+        },
+        {
+            "id": 90,
+            "name": "Plano_Irrigacao_91",
+            "cost": 29,
+            "productivity": 27
+        },
+        {
+            "id": 91,
+            "name": "Pesticida_92",
+            "cost": 17,
+            "productivity": 20
+        },
+        {
+            "id": 92,
+            "name": "Contrato_Trabalho_93",
+            "cost": 17,
+            "productivity": 22
+        },
+        {
+            "id": 93,
+            "name": "Fertilizante_94",
+            "cost": 16,
+            "productivity": 19
+        },
+        {
+            "id": 94,
+            "name": "Contrato_Trabalho_95",
+            "cost": 77,
+            "productivity": 70
+        },
+        {
+            "id": 95,
+            "name": "Contrato_Trabalho_96",
+            "cost": 20,
+            "productivity": 27
+        },
+        {
+            "id": 96,
+            "name": "Fertilizante_97",
+            "cost": 86,
+            "productivity": 72
+        },
+        {
+            "id": 97,
+            "name": "Pesticida_98",
+            "cost": 61,
+            "productivity": 53
+        },
+        {
+            "id": 98,
+            "name": "Contrato_Trabalho_99",
+            "cost": 41,
+            "productivity": 49
+        },
+        {
+            "id": 99,
+            "name": "Fertilizante_100",
+            "cost": 89,
+            "productivity": 76
+        }
+    ]
+}
