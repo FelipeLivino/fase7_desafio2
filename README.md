@@ -210,13 +210,18 @@ AWS_SECRET_ACCESS_KEY=sua_secret_key
 SNS_TOPIC_ARN=arn:aws:sns:sa-east-1:xxxx:nome-do-topico
 ```
 
-### 3. Execute todos os serviços
+### 3. Execute o notebook do capitulo 6
+
+Entre no arquivo fase6/treinamento/FelipeLivinoDosSantos_rm563187_pbl_fase6.ipynb e execute a o notebook.
+Esse passo é necessário devido a instalação do yolo para o reconhecimento das imagens
+
+### 4. Execute todos os serviços
 
 ```bash
 docker-compose up --build
 ```
 
-### 4. Acesse os serviços
+### 5. Acesse os serviços
 
 - **Fase 1 (CLI/Web)**: http://localhost:8501
 - **Fase 2 (PostgreSQL)**: `localhost:5432` (usuário: `user`, senha: `password`)
@@ -374,7 +379,7 @@ docker-compose up --build
 
 ### Backend
 
-- **Python 3.9+**
+- **Python 3.13+**
 - **FastAPI**: Framework para APIs REST
 - **Streamlit**: Dashboards interativos
 - **PostgreSQL**: Banco de dados relacional
@@ -428,36 +433,6 @@ Cada pasta contém seu próprio `README.md` com:
 
 ---
 
-## 🤝 Contribuindo
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
-5. Abra um Pull Request
-
----
-
-## 📄 Licença
-
-Este projeto foi desenvolvido como parte do curso FIAP.
-
----
-
-## 👥 Autores
-
-**Estudante FIAP**  
-Projeto desenvolvido durante as fases do curso de pós-graduação.
-
----
-
-## 📞 Suporte
-
-Para dúvidas ou problemas, consulte a documentação específica de cada fase ou abra uma issue no repositório.
-
----
-
-**Desenvolvido com ❤️ para o ecossistema agropecuário** 🌾🐄
 
 ## 📋 Licença
 
